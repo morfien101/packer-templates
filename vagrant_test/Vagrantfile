@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = '2'.freeze
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = 'ubuntu-16.10'
+
+  config.vm.define 'builder' do |builder|
+    builder.vm.network 'private_network', ip: '172.20.20.91'
+    builder.vm.hostname = 'builder'
+    builder.vm.provider 'virtualbox' do |vb|
+      vb.customize ['setextradata', 'global', 'GUI/SuppressMessages', 'all' ]
+      vb.customize ['modifyvm', :id, '--ioapic', 'on']
+      vb.cpus = 2
+      vb.memory = 2048
+      vb.linked_clone = true
+    end
+  end
+end

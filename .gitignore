@@ -1,0 +1,9 @@
+*.box
+*.iso
+.bundle/
+.vagrant/
+output-*/
+packer_cache/
+packer
+packer.exe
+
