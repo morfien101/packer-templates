@@ -31,6 +31,6 @@ You can configure each template to match your requirements by setting the follow
 
 ### Example
 
-Build an uncompressed Arch Linux vagrant box with a 4GB hard disk using the VirtualBox provider:
+Build an uncompressed Ubuntu Linux vagrant box with a 4GB hard disk using the VirtualBox provider:
 
     $ packer build -var compression_level=0 -var disk_size=4000 json_files\ubuntu-16.10-amd64.json
