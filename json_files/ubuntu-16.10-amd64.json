@@ -39,6 +39,7 @@
       "scripts/ubuntu/virtualbox.sh",
       "scripts/common/vagrant.sh",
       "scripts/common/sshd.sh",
+      "scripts/ubuntu/install_common_tools.sh",
       "scripts/common/install_go.sh",
       "scripts/ubuntu/install_ruby.sh",
       "scripts/ubuntu/install_docker.sh",

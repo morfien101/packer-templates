@@ -5,6 +5,7 @@
 VAGRANTFILE_API_VERSION = '2'.freeze
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'ubuntu-16.10'
+  config.vm.box_url = 'c:/packer/boxes/ubuntu/ubuntu-16.10-amd64-virtualbox.box'
 
   config.vm.define 'builder' do |builder|
     builder.vm.network 'private_network', ip: '172.20.20.91'
